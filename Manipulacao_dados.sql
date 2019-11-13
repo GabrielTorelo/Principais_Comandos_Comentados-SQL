@@ -16,7 +16,7 @@ values('Luciano', 'Rua: XV de Novembro', 'Cornélio Procópio', '01', '8630000',
 
 select * from cliente;/* Seleciona a tabela cliente */
 
-alter table cliente change cliente_end cliente_end varchar(80) not null; /* na tabela cliente altera cliente_end por cliete_end VARCHAR(80) not null */
+alter table cliente change cliente_end cliente_end varchar(80) not null; /* Na tabela cliente altera cliente_end por cliete_end VARCHAR(80) not null */
 
 alter table cliente modify cliente_end_cep varchar(10);/* Altera a tabela cliente e modifica o tipo de dado para VARCHAR e seu novo tamanho */
 
