@@ -100,6 +100,23 @@ ORDER BY cliente_per_desconto DESC;
 SELECT cliente_per_desconto FROM bd1sql_ex1.cliente
 ORDER BY cliente_per_desconto ASC;
 
-/*  */
+/* Busca os dados com a inicial 'E' */
 SELECT cliente_nome FROM bd1sql_ex1.cliente
 WHERE cliente_nome LIKE 'E%';
+
+/* Busca os dados com a segunda letra 'E', ou seja, _e, __e, _e_ é utilizado para desconsiderar os campos com _ na consulta */
+SELECT cliente_nome FROM bd1sql_ex1.cliente
+WHERE cliente_nome LIKE '_A_%';
+
+/* Busca os dados com a ultima letra sendo O */
+SELECT cliente_nome FROM bd1sql_ex1.cliente
+WHERE cliente_nome LIKE '%O';
+
+/* Elimina os dados sem necessitar do commit */
+TRUNCATE TABLE cliente;
+
+/* Seleciona a esquerda os 3 primeiros caracteres dos dados da coluna cliente_nome da tabela cliente  */
+SELECT LEFT(cliente_nome,3) From bd1sql_ex1.cliente;
+
+/* Seleciona a direita os 5 primeiros caracteres dos dados da coluna cliente_nome da tabela cliente  */
+SELECT RIGHT(cliente_nome,5) From bd1sql_ex1.cliente;
